@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ data.personal.name }} - Resume</title>
+    <link rel="stylesheet" href="../styles/resume.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="profile">
+          <h1>{{ data.personal.name }}</h1>
+          <p class="subheading">{{ data.summary }}</p>
+        </div>
+        <div class="contact">
+          {% if data.personal.email %}<p>{{ data.personal.email }}</p>{% endif %}
+          {% if data.personal.phone %}<p>{{ data.personal.phone }}</p>{% endif %}
+          <p>{{ data.personal.location }}</p>
+          <p><a href="https://{{ data.personal.linkedin }}">{{ data.personal.linkedin }}</a></p>
+          <p><a href="https://{{ data.personal.github }}">{{ data.personal.github }}</a></p>
+        </div>
+      </header>
+
+      <section>
+        <h2>Experience</h2>
+        {% for experience in data.experiences %}
+        <article class="section-card">
+          <div class="section-card__heading">
+            <div>
+              <h3>{{ experience.title }}</h3>
+              <p class="muted">{{ experience.company }}</p>
+            </div>
+            <p class="date-range">{{ experience.start_date | format_date }} – {{ experience.end_date | format_date }}</p>
+          </div>
+          <p>{{ experience.description }}</p>
+          <ul>
+            {% for achievement in experience.achievements %}
+            <li>{{ achievement }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+        {% endfor %}
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        {% for project in data.projects %}
+        <article class="section-card">
+          <div class="section-card__heading">
+            <div>
+              <h3>{{ project.name }}</h3>
+              <p>{{ project.description }}</p>
+            </div>
+            {% if project.url %}
+            <p class="project-link"><a href="https://{{ project.url }}">{{ project.url | replace('https://', '') | replace('http://', '') }}</a></p>
+            {% endif %}
+          </div>
+          <p class="small-label">Technologies: {{ project.technologies | join(", ") }}</p>
+          {% if project.tags %}
+          <div class="tag-list">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          {% for category, items in data.skills.items() %}
+          <div>
+            <h3>{{ category | capitalize }}</h3>
+            <p>{{ items | join(", ") }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        {% for education in data.education %}
+        <article class="section-card">
+          <div class="section-card__heading">
+            <div>
+              <h3>{{ education.degree }} in {{ education.field }}</h3>
+              <p class="muted">{{ education.school }}</p>
+            </div>
+            <p class="date-range">{{ education.graduation }}</p>
+          </div>
+          {% if education.gpa %}
+          <p>GPA: {{ education.gpa }}</p>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+{
+  "personal": {
+    "name": "Shmuel Toren",
+    "email": "",
+    "phone": "",
+    "location": "",
+    "linkedin": "linkedin.com/in/shmuel-toren-03aa37314",
+    "github": "github.com/sh20022002"
+  },
+  "summary": "Back-end and full-stack developer with hands-on experience building AI-powered applications, ML model pipelines, and production-ready web platforms. Experienced in Python, FastAPI, React, and full-stack automation including WhatsApp scraping, resume tailoring, and AI-driven matching systems.",
+  "experiences": [
+    {
+      "id": "exp_001",
+      "company": "DataStream Inc.",
+      "title": "Senior Software Engineer",
+      "start_date": "2022-03",
+      "end_date": "present",
+      "description": "Led backend infrastructure for a real-time data streaming platform serving 500M+ events/day.",
+      "achievements": [
+        "Designed and implemented a distributed event-processing pipeline using Apache Kafka and Python, reducing latency by 40%.",
+        "Migrated monolithic ETL jobs to a microservices architecture on AWS ECS, cutting infrastructure costs by 30%.",
+        "Mentored a team of 4 junior engineers through weekly code reviews and pair programming sessions.",
+        "Built an internal CLI tool for debugging live streams, adopted by the entire engineering organization."
+      ],
+      "tags": ["python", "kafka", "aws", "microservices", "distributed-systems", "etl"]
+    },
+    {
+      "id": "exp_002",
+      "company": "HealthLogic Corp.",
+      "title": "Software Engineer",
+      "start_date": "2019-06",
+      "end_date": "2022-02",
+      "description": "Built HIPAA-compliant data pipelines and APIs for a cloud-based electronic health records platform.",
+      "achievements": [
+        "Developed RESTful APIs in Django REST Framework consumed by 200+ hospital clients.",
+        "Implemented end-to-end encryption for patient data at rest and in transit, achieving HIPAA and SOC 2 Type II compliance.",
+        "Reduced database query times by 60% through PostgreSQL query optimization and strategic indexing.",
+        "Led the migration from on-prem servers to AWS, decreasing operational overhead by 50%."
+      ],
+      "tags": ["python", "django", "postgresql", "aws", "hipaa", "rest-api", "healthcare"]
+    },
+    {
+      "id": "exp_003",
+      "company": "PaySwift Technologies",
+      "title": "Backend Developer",
+      "start_date": "2017-08",
+      "end_date": "2019-05",
+      "description": "Developed payment processing integrations and fraud detection services for a fintech startup.",
+      "achievements": [
+        "Integrated Stripe, Plaid, and ACH payment rails into the core platform, enabling $50M+ in monthly transaction volume.",
+        "Built a rule-based fraud detection engine that reduced chargebacks by 25%.",
+        "Designed a real-time transaction notification system using WebSockets and Redis pub/sub.",
+        "Wrote comprehensive unit and integration tests, maintaining 92% code coverage."
+      ],
+      "tags": ["python", "redis", "websockets", "fintech", "payments", "fraud-detection", "stripe"]
+    },
+    {
+      "id": "exp_004",
+      "company": "CodeBridge Agency",
+      "title": "Junior Developer",
+      "start_date": "2016-01",
+      "end_date": "2017-07",
+      "description": "Built full-stack web applications for small business clients across retail, hospitality, and e-commerce.",
+      "achievements": [
+        "Delivered 12 client websites using React, Node.js, and MySQL within tight deadlines.",
+        "Implemented responsive UI components and improved average page load time by 35%.",
+        "Set up CI/CD pipelines using Jenkins and GitHub Actions for automated testing and deployment."
+      ],
+      "tags": ["javascript", "react", "nodejs", "mysql", "ci-cd", "frontend", "fullstack"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_001",
+      "name": "StreamWatch",
+      "description": "Open-source observability dashboard for Kafka-based data pipelines. Provides real-time metrics, lag monitoring, consumer group health, and alerting integrations.",
+      "technologies": ["Python", "FastAPI", "Apache Kafka", "Prometheus", "Grafana", "React"],
+      "url": "github.com/alexjohnson/streamwatch",
+      "tags": ["kafka", "observability", "open-source", "python", "distributed-systems", "monitoring"]
+    },
+    {
+      "id": "proj_002",
+      "name": "ResumeRadar",
+      "description": "ML-powered job-resume matching tool that uses NLP to score resume-job alignment and suggest missing keywords. Built with Python, spaCy, and a FastAPI backend.",
+      "technologies": ["Python", "spaCy", "FastAPI", "PostgreSQL", "Docker"],
+      "url": "github.com/alexjohnson/resumeradar",
+      "tags": ["python", "nlp", "machine-learning", "fastapi", "spacy"]
+    },
+    {
+      "id": "proj_003",
+      "name": "BudgetBot",
+      "description": "Personal finance Telegram bot that categorizes transactions from bank CSV exports, tracks spending trends, and sends weekly summaries using Claude AI for natural language interaction.",
+      "technologies": ["Python", "Telegram Bot API", "Claude API", "SQLite", "Pandas"],
+      "url": "github.com/alexjohnson/budgetbot",
+      "tags": ["python", "telegram", "claude-api", "llm", "fintech", "personal-finance"]
+    },
+    {
+      "id": "proj_004",
+      "name": "HealthSync API",
+      "description": "FHIR-compliant REST API middleware that normalizes data from disparate EHR systems into a unified format. Supports HL7 v2, FHIR R4, and custom CSV ingestion.",
+      "technologies": ["Python", "Django", "PostgreSQL", "Docker", "HL7", "FHIR"],
+      "url": "github.com/alexjohnson/healthsync",
+      "tags": ["python", "django", "fhir", "hl7", "healthcare", "rest-api", "interoperability"]
+    },
+    {
+      "id": "proj_005",
+      "name": "Querify",
+      "description": "CLI tool that converts natural language questions into SQL queries using LLMs, with support for schema introspection and query explanation. Works with PostgreSQL and SQLite.",
+      "technologies": ["Python", "Click", "SQLAlchemy", "Claude API", "PostgreSQL"],
+      "url": "github.com/alexjohnson/querify",
+      "tags": ["python", "llm", "sql", "cli", "claude-api", "developer-tools"]
+    },
+    {
+      "id": "proj_006",
+      "name": "Heart ECG Anomaly Detection Pipeline",
+      "description": "ECG anomaly detection pipeline that preprocesses MIT-BIH heartbeat signals, trains an LSTM-based model, and supports image-based ECG diagnosis through a Streamlit interface.",
+      "technologies": ["Python", "Jupyter Notebook", "LSTM", "Streamlit", "MIT-BIH", "Deep Learning"],
+      "url": "github.com/sh20022002/heart_ecg",
+      "tags": ["python", "machine-learning", "deep-learning", "ecg", "healthcare", "streamlit"]
+    },
+    {
+      "id": "proj_007",
+      "name": "SmarTraid",
+      "description": "Advanced algo trading system for S&P 500 markets that uses scraping, predictive analytics, and genetic algorithm optimization to generate trading signals and manage portfolio data.",
+      "technologies": ["Python", "Scraping", "Quantitative Trading", "Genetic Algorithms", "Database"],
+      "url": "github.com/sh20022002/StockScanner",
+      "tags": ["python", "algorithmic-trading", "scraping", "quantitative-finance", "genetic-algorithms"]
+    },
+    {
+      "id": "proj_008",
+      "name": "Handwritten Digit Recognition",
+      "description": "MNIST-based handwritten digit recognition system with data preprocessing, model training, evaluation, and prediction visualization built in Python notebooks.",
+      "technologies": ["Python", "Jupyter Notebook", "TensorFlow", "Keras", "MNIST"],
+      "url": "github.com/sh20022002/digit_recogntion",
+      "tags": ["python", "machine-learning", "computer-vision", "mnist", "deep-learning"]
+    },
+    {
+      "id": "proj_009",
+      "name": "Wafer Scratch Detection with Attention U-Net",
+      "description": "Automated wafer scratch segmentation using an Attention U-Net architecture. Converts wafer inspection data to dense defect masks and extracts scratch coordinates for engineering review.",
+      "technologies": ["Python", "Jupyter Notebook", "PyTorch", "Attention U-Net", "Computer Vision"],
+      "url": "github.com/sh20022002/scratch_detection_assignment",
+      "tags": ["python", "computer-vision", "deep-learning", "unet", "semiconductor"]
+    },
+    {
+      "id": "proj_010",
+      "name": "Job Matcher AI",
+      "description": "Full-stack job search assistant that scrapes WhatsApp job leads, extracts resume content, matches jobs with Claude AI, and generates tailored resumes and cover letters.",
+      "technologies": ["Python", "FastAPI", "React", "MongoDB", "Selenium", "Docker"],
+      "url": "github.com/sh20022002/job-matcher-ai",
+      "tags": ["python", "react", "fastapi", "ml", "resume-tailoring", "automation"]
+    },
+    {
+      "id": "proj_011",
+      "name": "Small Language Model",
+      "description": "Hybrid tokenizer and tiny Transformer training loop designed for Colab. Implements a compact small language model with byte-fallback encoding and RLE/flat token modes.",
+      "technologies": ["Python", "PyTorch", "Transformers", "Tokenizer", "Jupyter Notebook"],
+      "url": "github.com/sh20022002/small-Language-Model",
+      "tags": ["python", "nlp", "transformers", "deep-learning", "tokenization"]
+    },
+    {
+      "id": "proj_012",
+      "name": "Java Algorithm Collection",
+      "description": "Java repository containing algorithm exercises and graph implementations including Dijkstra shortest path, built as part of core Java learning and systems practice.",
+      "technologies": ["Java", "Algorithms", "Data Structures"],
+      "url": "github.com/sh20022002/java",
+      "tags": ["java", "algorithms", "graph-theory", "software-engineering"]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "JavaScript", "TypeScript", "SQL", "Bash", "Java", "HTML", "CSS", "Shell", "Batchfile"],
+    "frameworks": ["Django", "FastAPI", "Flask", "React", "Node.js", "Streamlit", "PyTorch", "TensorFlow"],
+    "data": ["Apache Kafka", "Apache Spark", "PostgreSQL", "Redis", "Elasticsearch", "Pandas", "MongoDB", "SQLite", "NumPy", "scikit-learn"],
+    "cloud": ["AWS (EC2, ECS, S3, Lambda, RDS)", "Docker", "Kubernetes", "Terraform"],
+    "practices": ["CI/CD", "Test-Driven Development", "Agile/Scrum", "System Design", "Code Review", "Full-Stack Development", "Machine Learning", "Data Scraping", "Model Training"],
+    "tools": ["Git", "GitHub Actions", "Jenkins", "Prometheus", "Grafana", "Jira", "Docker", "Selenium", "PyPDF2", "WebSocket", "Kaggle"]
+  },
+  "education": [
+    {
+      "school": "University of California, Berkeley",
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "graduation": "2016",
+      "gpa": "3.7"
+    }
+  ]
+}
