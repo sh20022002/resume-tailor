@@ -22,6 +22,20 @@
         </div>
       </header>
 
+      {% if data.job_post and data.job_post.text %}
+      <section>
+        <h2>Job Posting</h2>
+        <article class="section-card">
+          <div class="section-card__heading">
+            <div>
+              <h3>Job Description</h3>
+              <p>{{ data.job_post.text }}</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      {% endif %}
+
       <section>
         <h2>Experience</h2>
         {% for experience in data.experiences %}

@@ -21,7 +21,43 @@ Generate HTML and PDF:
 python resume_tailor.py --output-dir output --pdf
 ```
 
-> On Windows, PDF generation requires additional WeasyPrint system dependencies such as `libgobject-2.0` and the GTK/GDK libraries. See the WeasyPrint installation guide if the PDF step fails.
+Run the GUI:
+
+```bash
+python gui.py
+```
+
+If you want to include a job posting as part of the resume output:
+
+```bash
+python resume_tailor.py --output-dir output --pdf --job-post-file path/to/job.txt
+```
+
+or:
+
+```bash
+python resume_tailor.py --output-dir output --pdf --job-post-text "Senior Data Engineer wanted at an AI-driven fintech startup..."
+```
+
+> On Windows, PDF generation may require additional WeasyPrint system dependencies such as `libgobject-2.0` and the GTK/GDK libraries.
+>
+> To install dependencies on Windows, install the GTK/Cairo/Pango stack before running PDF generation.
+>
+> Example using Chocolatey:
+>
+> ```powershell
+> choco install gtk-runtime gdk-pixbuf pango cairo libffi
+> python -m pip install --upgrade weasyprint
+> python resume_tailor.py --output-dir output --pdf
+> ```
+>
+> If WeasyPrint is unavailable, the script now falls back to a structured PDF generated from resume data using ReportLab if `reportlab` is installed.
+>
+> If you do not need PDF output, generate the resume as HTML only:
+>
+> ```bash
+> python resume_tailor.py --output-dir output
+> ```
 
 The script reads `resume_data.json` by default and uses `templates/resume.html.j2` plus `styles/resume.css`.
 
